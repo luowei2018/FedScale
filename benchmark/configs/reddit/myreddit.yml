@@ -23,7 +23,7 @@ auth:
 
 # cmd to run before we can indeed run FAR (in order)
 setup_commands:
-    - source /proj/cos518f22-PG0/wl4563/miniconda3/bin/activate fedscale    
+    - /proj/cos518f22-PG0/wl4563/miniconda3/bin/activate fedscale    
     - setenv NCCL_SOCKET_IFNAME 'eno1'         # Run "ifconfig" to ensure the right NIC for nccl if you have multiple NICs
 
 # ========== Additional job configuration ========== 
