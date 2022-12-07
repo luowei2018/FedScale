@@ -8,13 +8,13 @@ import grpc
 import torch
 from torch.utils.tensorboard import SummaryWriter
 
-import fedscale.core.channels.job_api_pb2_grpc as job_api_pb2_grpc
-import fedscale.core.logger.aggragation as logger
-import fedscale.core.config_parser as parser
-from fedscale.core import commons
-from fedscale.core.channels import job_api_pb2
-from fedscale.core.resource_manager import ResourceManager
-from fedscale.core.fllibs import *
+import FedScale.fedscale.core.channels.job_api_pb2_grpc as job_api_pb2_grpc
+import FedScale.fedscale.core.logger.aggragation as logger
+import FedScale.fedscale.core.config_parser as parser
+from FedScale.fedscale.core import commons
+from FedScale.fedscale.core.channels import job_api_pb2
+from FedScale.fedscale.core.resource_manager import ResourceManager
+from FedScale.fedscale.core.fllibs import *
 
 MAX_MESSAGE_LENGTH = 1*1024*1024*1024  # 1GB
 
