@@ -18,7 +18,7 @@ executor_entry: execution/executor.py
 aggregator_entry: aggregation/aggregator.py
 
 auth:
-    ssh_user: ""
+    ssh_user: "wl4563"
     ssh_private_key: ~/.ssh/id_rsa
 
 # cmd to run before we can indeed run FAR (in order)
