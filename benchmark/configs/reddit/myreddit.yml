@@ -20,11 +20,12 @@ aggregator_entry: aggregation/aggregator.py
 auth:
     ssh_user: ""
     ssh_private_key: ~/.ssh/id_rsa
+    ssh_public_ley: ~/.ssh/id_rsa.pub
 
 # cmd to run before we can indeed run FAR (in order)
 setup_commands:
-#    - /proj/cos518f22-PG0/wl4563/miniconda3/bin/activate fedscale    
-#    - setenv NCCL_SOCKET_IFNAME 'eno1'         # Run "ifconfig" to ensure the right NIC for nccl if you have multiple NICs
+    - /proj/cos518f22-PG0/wl4563/miniconda3/bin/activate fedscale    
+    - setenv NCCL_SOCKET_IFNAME 'eno1'         # Run "ifconfig" to ensure the right NIC for nccl if you have multiple NICs
 
 # ========== Additional job configuration ========== 
 # Default parameters are specified in config_parser.py, wherein more description of the parameter can be found
