@@ -122,14 +122,14 @@ def init_model():
     import_libs()
 
     if parser.args.task == 'nlp':
-          from transformers import AutoTokenizer, AutoModelForMaskedLM
-#         config = AutoConfig.from_pretrained(
-#             os.path.join('https://huggingface.co/', parser.args.model+'-config.json'))
-#             #os.path.join(parser.args.data_dir, parser.args.model+'-config.json'))
-#        model = AutoModelWithLMHead.from_config(config)
-        model = AutoModelForMaskedLM.from_pretrained(parser.args.model)
-        tokenizer = AlbertTokenizer.from_pretrained(
-            parser.args.model, do_lower_case=True)
+         from transformers import AutoTokenizer, AutoModelForMaskedLM
+#          config = AutoConfig.from_pretrained(
+#              os.path.join('https://huggingface.co/', parser.args.model+'-config.json'))
+#              #os.path.join(parser.args.data_dir, parser.args.model+'-config.json'))
+#          model = AutoModelWithLMHead.from_config(config)
+         model = AutoModelForMaskedLM.from_pretrained(parser.args.model)
+         tokenizer = AlbertTokenizer.from_pretrained(
+             parser.args.model, do_lower_case=True)
 
         # model_name = 'google/mobilebert-uncased'
         # config = AutoConfig.from_pretrained(model_name)
