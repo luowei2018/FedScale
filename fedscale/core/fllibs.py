@@ -46,7 +46,7 @@ def import_libs():
         global AdamW, AlbertTokenizer, AutoConfig, AutoModelWithLMHead, AutoTokenizer, MobileBertForPreTraining, load_and_cache_examples, mask_tokens
 
         from transformers import (AdamW, AlbertTokenizer, AutoConfig,
-                                AutoModelWithLMHead, AutoTokenizer,
+                                AutoModelWithLMHead, AutoModelForMaskedLM, AutoTokenizer,
                                 MobileBertForPreTraining)
 
         from fedscale.dataloaders.nlp import load_and_cache_examples, mask_tokens
