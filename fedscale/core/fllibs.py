@@ -123,7 +123,8 @@ def init_model():
 
     if parser.args.task == 'nlp':
         config = AutoConfig.from_pretrained(
-            os.path.join(parser.args.data_dir, parser.args.model+'-config.json'))
+            os.path.join('https://huggingface.co/models', parser.args.model+'-config.json'))
+            #os.path.join(parser.args.data_dir, parser.args.model+'-config.json'))
         model = AutoModelWithLMHead.from_config(config)
         tokenizer = AlbertTokenizer.from_pretrained(
             parser.args.model, do_lower_case=True)
