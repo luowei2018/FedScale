@@ -42,6 +42,9 @@ class Executor(object):
             logger.logDir, 'model_'+str(args.this_rank)+'.pth.tar')
 
         # ======== channels ========
+        print("channels")
+        print(args.ps_ip)
+        print(args.ps_port)
         self.aggregator_communicator = ClientConnections(
             args.ps_ip, args.ps_port)
 
@@ -58,6 +61,7 @@ class Executor(object):
     def setup_env(self):
         """Set up experiments environment
         """
+        print("envenv")
         logging.info(f"(EXECUTOR:{self.this_rank}) is setting up environ ...")
         self.setup_seed(seed=1)
 
@@ -128,6 +132,7 @@ class Executor(object):
         logging.info("Data partitioner completes ...")
 
         if self.task == 'nlp':
+            print("i am nlp")
             self.collate_fn = collate
         elif self.task == 'voice':
             self.collate_fn = voice_collate_fn
@@ -141,6 +146,7 @@ class Executor(object):
         self.training_sets, self.testing_sets = self.init_data()
         self.setup_communication()
         self.event_monitor()
+        print("run func end")
 
     def dispatch_worker_events(self, request):
         """Add new events to worker queues
