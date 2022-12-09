@@ -872,6 +872,7 @@ class Aggregator(job_api_pb2_grpc.JobServiceServicer):
         while True:
             # Broadcast events to clients
             if len(self.broadcast_events_queue) > 0:
+                logging.info("len(self.broadcast_events_queue) > 0: ...")
                 current_event = self.broadcast_events_queue.popleft()
 
                 if current_event in (commons.UPDATE_MODEL, commons.MODEL_TEST):
@@ -887,6 +888,7 @@ class Aggregator(job_api_pb2_grpc.JobServiceServicer):
 
             # Handle events queued on the aggregator
             elif len(self.sever_events_queue) > 0:
+                logging.info("len(self.sever_events_queue) > 0: ...")
                 client_id, current_event, meta, data = self.sever_events_queue.popleft()
 
                 if current_event == commons.UPLOAD_MODEL:
