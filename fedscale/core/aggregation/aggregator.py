@@ -906,7 +906,6 @@ class Aggregator(job_api_pb2_grpc.JobServiceServicer):
 
             else:
                 # execute every 100 ms
-                logging.info("sleep")
                 time.sleep(0.1)
 
     def stop(self):
