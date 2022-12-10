@@ -35,7 +35,7 @@ job_conf:
     - task: nlp
     - num_participants: 1                      # Number of participants per round, we use K=100 in our paper, large K will be much slower
     - data_set: blog                     # Dataset: openImg, google_speech, reddit
-    - data_dir: $/proj/cos518f22-PG0/wl4563/FedScale/benchmark/dataset/data/reddit    # Path of the dataset
+    - data_dir: /proj/cos518f22-PG0/wl4563/FedScale/benchmark/dataset/data/reddit    # Path of the dataset
     - data_map_file: $FEDSCALE_HOME/benchmark/dataset/data/reddit/client_data_mapping/train.csv              # Allocation of data to each client, turn to iid setting if not provided
     - device_conf_file: $FEDSCALE_HOME/benchmark/dataset/data/device_info/client_device_capacity     # Path of the client trace
     - device_avail_file: $FEDSCALE_HOME/benchmark/dataset/data/device_info/client_behave_trace
