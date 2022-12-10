@@ -132,7 +132,7 @@ class Executor(object):
         logging.info("Data partitioner completes ...")
 
         if self.task == 'nlp':
-             logging.info(f"i am nlp")
+            logging.info(f"i am nlp")
             self.collate_fn = collate
         elif self.task == 'voice':
             self.collate_fn = voice_collate_fn
