@@ -3,8 +3,8 @@
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # no color
-DIR="$(dirname $0)/data"
-#DIR="/mydata"
+#DIR="$(dirname $0)/data"
+DIR="/mydata"
 ARGS=${@: 2};
 
 # Download and decompress datasets
