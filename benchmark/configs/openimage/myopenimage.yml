@@ -30,9 +30,9 @@ setup_commands:
 # Default parameters are specified in config_parser.py, wherein more description of the parameter can be found
 
 job_conf: 
-    - job_name: openimage-10-baseline                   # Generate logs under this folder: log_path/job_name/time_stamp
+    - job_name: openimage-100-baseline                   # Generate logs under this folder: log_path/job_name/time_stamp
     - log_path: $FEDSCALE_HOME/benchmark # Path of log files
-    - num_participants: 10                     # Number of participants per round, we use K=100 in our paper, large K will be much slower
+    - num_participants: 100                     # Number of participants per round, we use K=100 in our paper, large K will be much slower
     - data_set: openImg                     # Dataset: openImg, google_speech, stackoverflow
     - data_dir: /data/openImg    # Path of the dataset
     - data_map_file: /data/openImg/client_data_mapping/train.csv              # Allocation of data to each client, turn to iid setting if not provided
@@ -52,5 +52,5 @@ job_conf:
     - test_bsz: 20
     - malicious_factor: 4
     #- sample_mode: 'oort'
-    - ps_port: '29503'
+    - ps_port: '29504'
 
