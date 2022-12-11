@@ -51,4 +51,5 @@ job_conf:
     - batch_size: 20
     - test_bsz: 20
     - malicious_factor: 4
-    - sample_mode: "oort"
+    - sample_mode: 'oort'
+    - ps_port: '6007'
