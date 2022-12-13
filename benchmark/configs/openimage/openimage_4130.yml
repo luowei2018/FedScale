@@ -52,4 +52,4 @@ job_conf:
     - test_bsz: 20
     - malicious_factor: 4
     - sample_mode: 'oort'
-    - ps_port: '29502'
+    - ps_port: '29504'
